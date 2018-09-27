@@ -13,18 +13,17 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            BoardState newGame = new BoardState();
-            Console.WriteLine(newGame.space1);
+            var newGame = new BoardState();
 
-            //newGame.space1 = 'X';
 
-            Console.WriteLine(newGame.space1);
-
+            newGame.spaces[1] = 'x';
             newGame.printBoard();
+            newGame.markBoard(1);
 
             Console.WriteLine("Your turn x, select a spot to mark");
 
             string play = Console.ReadLine();
+
 
             if (play == "3")
             Console.WriteLine("You Win!");
