@@ -4,17 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ConsoleApp1
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            Console.WriteLine(@"1|2|3");
-            Console.WriteLine(@"-----");
-            Console.WriteLine(@"4|x|o");
-            Console.WriteLine(@"-----");
-            Console.WriteLine(@"x|8|o");
+            BoardState newGame = new BoardState();
+            Console.WriteLine(newGame.space1);
+
+            //newGame.space1 = 'X';
+
+            Console.WriteLine(newGame.space1);
+
+            newGame.printBoard();
 
             Console.WriteLine("Your turn x, select a spot to mark");
 
@@ -25,5 +31,7 @@ namespace ConsoleApp1
             else
                 Console.WriteLine("You Lose!");
         }
+
+       
     }
 }
