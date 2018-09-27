@@ -41,7 +41,9 @@ namespace ConsoleApp1
 
         public void markBoard(int move)
         {
-            Console.WriteLine(this);
+            move--;
+            spaces[move] = 'X';
+            printBoard();
         }
     }
 
