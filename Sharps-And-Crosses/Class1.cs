@@ -39,11 +39,21 @@ namespace ConsoleApp1
             //todo: add lose option 'O' and logic;
         }
 
+        //public void opponentMove()
+        //{ }
         public void markBoard(int move)
         {
             move--;
-            spaces[move] = 'X';
-            printBoard();
+            if (spaces[move] != 'X' && spaces[move] != 'O')
+            {
+                spaces[move] = 'X';
+                printBoard();
+            }
+            else
+            {
+                Console.WriteLine("Please choose an unclaimed space");
+                Program.promptForMove(this);
+            }
         }
     }
 
