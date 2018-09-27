@@ -21,10 +21,11 @@ namespace ConsoleApp1
             Console.WriteLine("Your turn x, select a spot to mark");
 
             var response = Console.ReadLine();
+
             int move = int.Parse(response);
 
             newGame.markBoard(move);
-            if (move == 3)
+            if (newGame.isWinner() == 'X')
             Console.WriteLine("You Win!");
             else
                 Console.WriteLine("You Lose!");

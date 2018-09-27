@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     public class BoardState
     {
-        public char[] spaces = new char[9] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        public char[] spaces = new char[9] { 'X', '2', '3', 'X', '5', '6', '7', '8', '9' };
 
 
         public void printBoard()
