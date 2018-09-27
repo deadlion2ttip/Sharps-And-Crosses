@@ -1,0 +1,7 @@
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\bin\Debug\ConsoleApp1.exe.config
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\bin\Debug\ConsoleApp1.exe
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\bin\Debug\ConsoleApp1.pdb
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\obj\Debug\ConsoleApp1.exe
+C:\Users\cigma\code\Sharps-And-Crosses\Sharps-And-Crosses\obj\Debug\ConsoleApp1.pdb
