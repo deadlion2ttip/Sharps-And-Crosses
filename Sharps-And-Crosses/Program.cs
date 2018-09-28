@@ -26,15 +26,28 @@ namespace ConsoleApp1
            
             newGame.printBoard();
 
-            while (newGame.isWinner() == 'N')
+            while (!newGame.isWinner())
             {
                 promptForMove(newGame);
-                newGame.opponentMove();
+
+                if (!newGame.isWinner())
+                {
+                    newGame.opponentMove();
+                } else
+                {
+                    newGame.setWinner('X');
+                }
             }
-            if (newGame.isWinner() == 'X')
-            Console.WriteLine("You Win!");
+            
+            if (newGame.winner == 'X')
+            {
+                Console.WriteLine("You Win!");
+            }
             else
+            {
                 Console.WriteLine("You Lose!");
+            }
+
         }
 
        

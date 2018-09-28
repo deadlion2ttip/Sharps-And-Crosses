@@ -8,8 +8,13 @@ namespace ConsoleApp1
 {
     public class BoardState
     {
-        public char[] spaces = new char[9] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        private char[] spaces = new char[9] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        public char winner = 'N';
 
+        public void setWinner(char w)
+        {
+            this.winner = w;
+        }
 
         public void printBoard()
         {
@@ -20,7 +25,7 @@ namespace ConsoleApp1
             Console.WriteLine("{0}|{1}|{2}", spaces[6], spaces[7], spaces[8]);
         }
 
-        public char isWinner()
+        public bool isWinner()
         {
             if((spaces[0] == spaces[1] && spaces[1] == spaces[2]) ||
                (spaces[3] == spaces[4] && spaces[4] == spaces[5]) ||
@@ -31,12 +36,12 @@ namespace ConsoleApp1
                (spaces[0] == spaces[4] && spaces[4] == spaces[8]) ||
                (spaces[2] == spaces[4] && spaces[4] == spaces[6]))
             {
-                return 'X';
+                return true;
             } else
             {
-                return 'N';
+                return false;
             }
-            //todo: add lose option 'O' and logic;
+           
         }
 
         public void opponentMove()
@@ -56,6 +61,10 @@ namespace ConsoleApp1
                 }
             }
             printBoard();
+            if (isWinner())
+            {
+                setWinner('O');
+            }
         }
         public void markBoard(int move)
         {
@@ -69,6 +78,11 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Please choose an unclaimed space");
                 Program.promptForMove(this);
+            }
+
+            if (isWinner())
+            {
+                setWinner('X');
             }
         }
     }
