@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     public class BoardState
     {
-        public char[] spaces = new char[9] { 'X', '2', '3', 'X', '5', '6', '7', '8', '9' };
+        public char[] spaces = new char[9] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
 
         public void printBoard()
@@ -39,8 +39,24 @@ namespace ConsoleApp1
             //todo: add lose option 'O' and logic;
         }
 
-        //public void opponentMove()
-        //{ }
+        public void opponentMove()
+        {
+            Console.WriteLine("My turn!");
+            Random rnd = new Random();
+            bool moveMade = false;
+
+            while (!moveMade)
+            {
+                int move = rnd.Next(1, 10);
+                move--;
+                if (spaces[move] != 'X' && spaces[move] != 'O')
+                {
+                    spaces[move] = 'O';
+                    moveMade = true;
+                }
+            }
+            printBoard();
+        }
         public void markBoard(int move)
         {
             move--;

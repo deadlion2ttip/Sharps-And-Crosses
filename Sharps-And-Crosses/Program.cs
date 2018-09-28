@@ -26,8 +26,11 @@ namespace ConsoleApp1
            
             newGame.printBoard();
 
-            promptForMove(newGame);
-           
+            while (newGame.isWinner() == 'N')
+            {
+                promptForMove(newGame);
+                newGame.opponentMove();
+            }
             if (newGame.isWinner() == 'X')
             Console.WriteLine("You Win!");
             else
