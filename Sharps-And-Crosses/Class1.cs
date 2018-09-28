@@ -22,7 +22,7 @@ namespace ConsoleApp1
             Console.WriteLine(@"-----");
             Console.WriteLine("{0}|{1}|{2}", spaces[3], spaces[4], spaces[5]);
             Console.WriteLine(@"-----");
-            Console.WriteLine("{0}|{1}|{2}", spaces[6], spaces[7], spaces[8]);
+            Console.WriteLine("{0}|{1}|{2} \n", spaces[6], spaces[7], spaces[8]);
         }
 
         public bool isWinner()

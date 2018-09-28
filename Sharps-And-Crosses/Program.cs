@@ -20,10 +20,12 @@ namespace ConsoleApp1
             game.markBoard(move);
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             var newGame = new BoardState();
-           
+
+            Console.WriteLine("Welcome to Sharps and Crosses! You get to be X \n");
+
             newGame.printBoard();
 
             while (!newGame.isWinner())
@@ -48,6 +50,19 @@ namespace ConsoleApp1
                 Console.WriteLine("You Lose!");
             }
 
+            Console.WriteLine("Would you like to play again? (y/n)");
+            
+            string again = Console.ReadLine();
+
+            if (again == "y" || again == "Y")
+            {
+                Main();
+            }
+            else
+            {
+                Console.WriteLine("\nGoodbye!");
+            }
+            
         }
 
        
